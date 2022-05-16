@@ -75,6 +75,16 @@ class Participant implements UserInterface, PasswordAuthenticatedUserInterface
      */
     private $organisateurSortie;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $pseudo;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $photo;
+
     public function __construct()
     {
         $this->inscritSortie = new ArrayCollection();
@@ -283,6 +293,30 @@ class Participant implements UserInterface, PasswordAuthenticatedUserInterface
                 $organisateurSortie->setOrganisateur(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getPseudo(): ?string
+    {
+        return $this->pseudo;
+    }
+
+    public function setPseudo(string $pseudo): self
+    {
+        $this->pseudo = $pseudo;
+
+        return $this;
+    }
+
+    public function getPhoto(): ?string
+    {
+        return $this->photo;
+    }
+
+    public function setPhoto(?string $photo): self
+    {
+        $this->photo = $photo;
 
         return $this;
     }
