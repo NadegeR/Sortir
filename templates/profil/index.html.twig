@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Profil | {{ parent() }} {% endblock %}
+
+{% block body %}
+<div class="row align-items-center">
+    <h2> Details du profil - {{ participant.pseudo }}</h2>
+
+    <table class="table">
+        <tbody>
+        <tr>
+            <th scope="row">Prenom :</th>
+            <td>{{ participant.prenom }}</td>
+        </tr>
+        <tr>
+            <th scope="row">Nom :</th>
+            <td>{{ participant.nom }}</td>
+        </tr>
+        <tr>
+            <th scope="row">Telephone :</th>
+            <td>{{ participant.telephone }}</td>
+        </tr>
+        <tr>
+            <th scope="row">Email :</th>
+            <td>{{ participant.email }}</td>
+        </tr>
+        <tr>
+            <th scope="row">Campus :</th>
+            <td>{{ participant.campus.nom }}</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <a href="#"> <button class="btn ">Retour</button></a>
+</div>
+    {% endblock %}

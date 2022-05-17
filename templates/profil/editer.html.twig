@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Profil | {{ parent() }} {% endblock %}
+
+{% block body %}
+{{ form_start(profilForm)}}
+    {{  form_widget(profilForm)  }}
+    {{ form_end(profilForm)}}
+
+{% endblock%}

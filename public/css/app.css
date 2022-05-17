@@ -35,14 +35,7 @@ main {
 .validation{
     display: inline-flex;
 }
-#_remember_me{
-    width: 15px;
-    margin: auto;
 
-}
-.remember{
-    margin: auto;
-}
 label {
     color: rgba(94, 94, 94, 0.93);
     font-weight: bolder;
@@ -51,7 +44,15 @@ label {
     width: 150px;
     float: left;
 }
-
+.form-check{
+    float: left;
+    display: inline-flex;
+    width: 200px;
+}
+#_remember_me{
+    width: 20px;
+    margin: 4% 0;
+}
 input,
 textarea,
 select {
@@ -91,4 +92,9 @@ footer {
     text-align: center;
     background-color: rgba(94, 94, 94, 0.93);
     padding: 10px;
+}
+
+.col{
+    display: block;
+    width: 400px;
 }
