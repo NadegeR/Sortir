@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Quicksand', sans-serif;
+    min-height: 100vh;
+    color: #5e5e5e;
+}
+
+.container {
+    max-width: 80%;
+    margin: auto;
+}
+.login-container{
+    height:400px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    align-content: space-between;
+}
+header {
+    background-color: rgba(0, 128, 128, 0.65);
+}
+
+.login-item {
+    width: 400px;
+}
+
+main {
+    flex: 1;
+    padding: 1rem 0;
+    background-color: #FFF1E6;
+}
+
+.validation{
+    display: inline-flex;
+}
+#_remember_me{
+    width: 15px;
+    margin: auto;
+
+}
+.remember{
+    margin: auto;
+}
+label {
+    color: rgba(94, 94, 94, 0.93);
+    font-weight: bolder;
+    padding: 0.2rem;
+    display: block;
+    width: 150px;
+    float: left;
+}
+
+input,
+textarea,
+select {
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+    width: 300px;
+    max-width: 50%;
+    border-radius: 5px;
+    padding: 0.2rem 0.5rem;
+
+}
+
+.flash {
+    padding: 20px;
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin: 1rem 0;
+    border-radius: 5px;
+}
+
+.flash-success {
+    background-color: rgba(73, 210, 210, 0.55);
+    font-style: italic;
+    color: #FFF1E6;
+}
+
+button {
+    background-color: rgba(0, 128, 128, 0.55);
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+
+}
+
+footer {
+    color: #FFFFFF;
+    text-align: center;
+    background-color: rgba(94, 94, 94, 0.93);
+    padding: 10px;
+}
