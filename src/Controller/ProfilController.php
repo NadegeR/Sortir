@@ -45,22 +45,24 @@ class ProfilController extends AbstractController
 
         if ($profilForm->isSubmitted() && $profilForm->isValid()) {
             $photoFile = $profilForm->get('photo')->getData();
+            // prise en charge de l'image
             if ($photoFile) {
                 $photoName = pathinfo($photoFile->getClientOriginalName(), PATHINFO_FILENAME);
                 // this is needed to safely include the file name as part of the URL
                 $safeFilename = $slugger->slug($photoName);
                 $newFilename = $safeFilename.'-'.uniqid().'.'.$photoFile->guessExtension();
 
-                // Move the file to the directory where covers are stored
+                // on deplace l'image vers le dossier photos
+                // photos_directory est defini dans config/service.yaml
                 try {
                     $photoFile->move(
                         $this->getParameter('photos_directory'),
                         $newFilename
                     );
                 } catch (FileException $e) {
-                    // ... handle exception if something happens during file upload
-                }
 
+                }
+                // on hydrate le nom de l'image dans le participant
                 $participant->setPhoto($newFilename);
             }
 
